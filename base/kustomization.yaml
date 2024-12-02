@@ -1,13 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: Kustomization
 metadata:
   name: pokedex.v1
-spec:
-  project: pokedextd
-  source:
-    path: pokeapi
-    repoURL: 'https://github.com/IanMo-fr/DeployPokeApi.git'
-    targetRevision: HEAD
-  destination:
-    namespace: pokedextd
-    server: 'https://kubernetes.default.svc'
+
+namespace: pokedexv1
+
+ressources:
+  - deployment.yaml

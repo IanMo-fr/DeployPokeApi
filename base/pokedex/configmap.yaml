@@ -3,3 +3,6 @@ kind: ConfigMap
 metadata:
   name: pokedex-cm
 data:
+  POKEDEX_NAME: "pokedex première gen"
+  POKEDEX_START_NUMBER: "1"
+  POKEDEX_END_NUMBER: "151"

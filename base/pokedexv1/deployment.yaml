@@ -18,9 +18,6 @@ spec:
         name: pokedex
         ports:
         - containerPort: 3000
-        # env:
-        #   - name: API_URL
-        #     valueFrom:
-        #       configMapKeyRef:
-        #         name: guestbook-cm
-        #         key: API_URL
+        envFrom:
+        - configMapRef:
+            name: pokedexv1-cm

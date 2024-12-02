@@ -3,4 +3,3 @@ kind: ConfigMap
 metadata:
   name: pokedex-cm
 data:
-  API_URL: "10.96.0.1"

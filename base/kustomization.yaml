@@ -4,5 +4,5 @@ kind: Kustomization
 namespace: pokedexv1
 
 resources:
-  - deployment.yaml/
   - pokedex/
+  - pokedexv1/

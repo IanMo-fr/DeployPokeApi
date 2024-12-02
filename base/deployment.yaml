@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokedexv1
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pokedexv1
+  template:
+    metadata:
+      labels:
+        app: pokedexv1
+    spec:
+      containers:
+      - image: pokeapi:0.1
+        name: pokedex
+        ports:
+        - containerPort: 3000
+        # env:
+        #   - name: API_URL
+        #     valueFrom:
+        #       configMapKeyRef:
+        #         name: guestbook-cm
+        #         key: API_URL
